@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { ExampleComponent } from 'svgbook-icons'
-import 'svgbook-icons/dist/index.css'
+import * as Icon from 'svgbook-icons'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <Icon.AirplaneInFlight
+      style='duotone'
+      color={'#52AE5D'}
+      size={50}
+      secondaryColor={'182319'}
+    />
+  )
 }
 
 export default App
