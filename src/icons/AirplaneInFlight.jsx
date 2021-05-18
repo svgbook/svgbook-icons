@@ -10,11 +10,10 @@ renderPath['outline'] = (color) => (
       y1='216'
       x2='216'
       y2='216'
-      stroke={color}
       fill='none'
+      stroke={color}
       strokeLinecap='round'
       strokeLinejoin='round'
-      strokeWidth='24'
     />
     <path
       d='M26.75225,80H44l20,24H96L83.50994,66.52982A8,8,0,0,1,91.09941,56H108l44,48h56a32,32,0,0,1,32,32v24H63.809a32,32,0,0,1-30.65044-22.80487L19.08963,90.29878A8,8,0,0,1,26.75225,80Z'
@@ -22,7 +21,6 @@ renderPath['outline'] = (color) => (
       stroke={color}
       strokeLinecap='round'
       strokeLinejoin='round'
-      strokeWidth='24'
     />
   </Fragment>
 )
@@ -48,7 +46,6 @@ renderPath['duotone'] = (color) => (
       stroke={color}
       strokeLinecap='round'
       strokeLinejoin='round'
-      strokeWidth='16'
     />
     <path
       d='M26.75225,80H44l20,24H96L83.50994,66.52982A8,8,0,0,1,91.09941,56H108l44,48h56a32,32,0,0,1,32,32v24H63.809a32,32,0,0,1-30.65044-22.80487L19.08963,90.29878A8,8,0,0,1,26.75225,80Z'
@@ -56,7 +53,6 @@ renderPath['duotone'] = (color) => (
       stroke={color}
       strokeLinecap='round'
       strokeLinejoin='round'
-      strokeWidth='16'
     />
   </Fragment>
 )

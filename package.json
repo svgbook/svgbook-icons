@@ -1,7 +1,7 @@
 {
   "name": "svgbook-icons",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "1.0.0-alpha01",
+  "description": "Svgbook react icons",
   "author": "svgbook",
   "license": "MIT",
   "repository": "svgbook/svgbook-icons",
