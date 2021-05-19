@@ -4,12 +4,7 @@ import * as Icon from 'svgbook-icons'
 
 const App = () => {
   return (
-    <Icon.AirplaneInFlight
-      style='duotone'
-      color={'#52AE5D'}
-      size={50}
-      secondaryColor={'182319'}
-    />
+    <Icon.Activity design='duotone' color={'#52AE5D'} size={50} stroke={1} />
   )
 }
 
