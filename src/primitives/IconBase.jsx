@@ -1,42 +1,51 @@
-import React from 'react'
+import React, { forwardRef, useContext } from 'react'
 import PropTypes from 'prop-types'
+import { IconContext } from './IconProvider'
+import useFinalValue from '../hooks/useFinalValue'
 
-const IconBase = ({
-  design,
-  size,
-  primaryColor,
-  secondaryColor,
-  strokeWidth,
-  renderPath
-}) => {
-  return (
-    <svg
-      xmlns={'http://www.w3.org/2000/svg'}
-      width={size}
-      height={size}
-      viewBox={`0 0 24 24`}
-      fill={primaryColor}
-      stroke={primaryColor}
-      strokeWidth={strokeWidth}
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    >
-      {/* TODO: Validate if style exits */}
-      {renderPath &&
-        renderPath[design](primaryColor, secondaryColor, strokeWidth)}
-    </svg>
-  )
-}
+const IconBase = forwardRef(
+  ({ design, size, color, secondaryColor, strokeWidth, renderPath }, ref) => {
+    const context = useContext(IconContext)
+
+    const {
+      design: contextDesign,
+      size: contextSize,
+      color: contextColor,
+      secondaryColor: contextSecondaryColor,
+      strokeWidth: contextStrokeWidth
+    } = context
+
+    design = useFinalValue(design, contextDesign, 'outline')
+    color = useFinalValue(color, contextColor, '#000000')
+    size = useFinalValue(size, contextSize, 36)
+    strokeWidth = useFinalValue(strokeWidth, contextStrokeWidth, 1)
+    secondaryColor = useFinalValue(
+      secondaryColor,
+      contextSecondaryColor,
+      '#A6A6A6'
+    )
+
+    return (
+      <svg
+        ref={ref}
+        xmlns={'http://www.w3.org/2000/svg'}
+        width={size}
+        height={size}
+        viewBox={`0 0 24 24`}
+        fill={color}
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      >
+        {renderPath[design] ? renderPath[design](color) : null}
+      </svg>
+    )
+  }
+)
 
 IconBase.propTypes = {
   renderPath: PropTypes.object
-}
-
-IconBase.defaultProps = {
-  primaryColor: '#000000',
-  size: '18',
-  stroke: '2',
-  style: 'outline'
 }
 
 export default IconBase

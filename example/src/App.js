@@ -1,10 +1,19 @@
 import React from 'react'
 
-import * as Icon from 'svgbook-icons'
+import { Icons, IconProvider } from 'svgbook-icons'
 
 const App = () => {
   return (
-    <Icon.Activity design='duotone' color={'#52AE5D'} size={50} stroke={1} />
+    <IconProvider
+      value={{
+        design: 'fill',
+        size: 200,
+        color: '#D44353',
+        strokeWidth: 0
+      }}
+    >
+      <Icons.Activity />
+    </IconProvider>
   )
 }
 
