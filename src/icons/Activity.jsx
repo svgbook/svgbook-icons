@@ -22,14 +22,19 @@ renderPath['duotone'] = (color) => (
   <Fragment>
     <path
       d='M15.1,21.27a1,1,0,0,1-.88-.64L8.77,6.32,5.82,12.81a1,1,0,0,1-.91.59H1.76a1,1,0,0,1,0-2h2.5L7.94,3.31a1,1,0,0,1,.87-.58h.11a1,1,0,0,1,.86.64l5.5,14.42L18.2,12a1,1,0,0,1,.89-.55h3.15a1,1,0,0,1,0,2H19.71l-3.66,7.32a1,1,0,0,1-.9.55Z'
+      fill={color}
+      fillOpacity='.2'
       stroke={color}
-      fill='none'
     />
+  </Fragment>
+)
+
+renderPath['color'] = (color, secondaryColor) => (
+  <Fragment>
     <path
       d='M15.1,21.27a1,1,0,0,1-.88-.64L8.77,6.32,5.82,12.81a1,1,0,0,1-.91.59H1.76a1,1,0,0,1,0-2h2.5L7.94,3.31a1,1,0,0,1,.87-.58h.11a1,1,0,0,1,.86.64l5.5,14.42L18.2,12a1,1,0,0,1,.89-.55h3.15a1,1,0,0,1,0,2H19.71l-3.66,7.32a1,1,0,0,1-.9.55Z'
-      opacity='.2'
-      stroke={'none'}
       fill={color}
+      stroke={secondaryColor}
     />
   </Fragment>
 )

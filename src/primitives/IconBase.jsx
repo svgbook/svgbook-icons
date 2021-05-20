@@ -38,7 +38,7 @@ const IconBase = forwardRef(
         strokeLinecap='round'
         strokeLinejoin='round'
       >
-        {renderPath[design] ? renderPath[design](color) : null}
+        {renderPath[design] ? renderPath[design](color, secondaryColor) : null}
       </svg>
     )
   }

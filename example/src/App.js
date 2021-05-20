@@ -6,13 +6,14 @@ const App = () => {
   return (
     <IconProvider
       value={{
-        design: 'fill',
+        design: 'color',
         size: 200,
-        color: '#D44353',
-        strokeWidth: 0
+        color: '#c62fad',
+        secondaryColor: '#c62f2f',
+        strokeWidth: 1
       }}
     >
-      <Icons.Activity />
+      <Icons.Copy />
     </IconProvider>
   )
 }
