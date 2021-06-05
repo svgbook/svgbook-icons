@@ -5,29 +5,41 @@ const renderPath = {}
 
 renderPath['outline'] = (color) => (
   <Fragment>
-    <polyline points='18.08 15.87 18.08 5.92 8.13 5.92' fill='none' />
-    <rect x='5.92' y='8.13' width='9.95' height='9.95' fill='none' />
+    <rect fill='none' x='9' y='9' width='9' height='9' rx='1.5' />
+    <path
+      fill='none'
+      d='M15,9V7.5A1.5,1.5,0,0,0,13.5,6h-6A1.5,1.5,0,0,0,6,7.5v6A1.5,1.5,0,0,0,7.5,15H9'
+    />
   </Fragment>
 )
 
 renderPath['fill'] = (color) => (
   <Fragment>
-    <polyline points='18.08 15.87 18.08 5.92 8.13 5.92' fill='none' />
-    <rect x='5.92' y='8.13' width='9.95' height='9.95' />
+    <rect x='9' y='9' width='9' height='9' rx='1.5' />
+    <path
+      fill='none'
+      d='M15,9V7.5A1.5,1.5,0,0,0,13.5,6h-6A1.5,1.5,0,0,0,6,7.5v6A1.5,1.5,0,0,0,7.5,15H9'
+    />
   </Fragment>
 )
 
 renderPath['duotone'] = (color) => (
   <Fragment>
-    <polyline points='18.08 15.87 18.08 5.92 8.13 5.92' fill='none' />
-    <rect x='5.92' y='8.13' width='9.95' height='9.95' fillOpacity='.2' />
+    <rect fillOpacity='.2' x='9' y='9' width='9' height='9' rx='1.5' />
+    <path
+      fill='none'
+      d='M15,9V7.5A1.5,1.5,0,0,0,13.5,6h-6A1.5,1.5,0,0,0,6,7.5v6A1.5,1.5,0,0,0,7.5,15H9'
+    />
   </Fragment>
 )
 
 renderPath['color'] = (color, secondaryColor) => (
   <Fragment>
-    <polyline points='18.08 15.87 18.08 5.92 8.13 5.92' fill='none' />
-    <rect x='5.92' y='8.13' width='9.95' height='9.95' fill={secondaryColor} />
+    <rect fill={secondaryColor} x='9' y='9' width='9' height='9' rx='1.5' />
+    <path
+      fill='none'
+      d='M15,9V7.5A1.5,1.5,0,0,0,13.5,6h-6A1.5,1.5,0,0,0,6,7.5v6A1.5,1.5,0,0,0,7.5,15H9'
+    />
   </Fragment>
 )
 

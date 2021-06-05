@@ -35,9 +35,27 @@ const IconBase = forwardRef(
         fill={color}
         stroke={color}
         strokeWidth={strokeWidth}
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeLinecap='round' // butt | round | square
+        strokeLinejoin='round' // arcs | bevel |miter | miter-clip | round
       >
+        <rect
+          fill='none'
+          stroke='none'
+          strokeWidth='1'
+          width='23'
+          height='23'
+          rx='1'
+          x='.5'
+          y='.5'
+        />
+        <circle
+          cx='12'
+          cy='12'
+          r='11.5'
+          fill='none'
+          stroke='none'
+          strokeWidth={1}
+        />
         {renderPath[design] ? renderPath[design](color, secondaryColor) : null}
       </svg>
     )
