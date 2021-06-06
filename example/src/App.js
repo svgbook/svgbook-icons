@@ -39,9 +39,12 @@ const App = () => {
       value={{
         design: iconDesign,
         size: 200,
-        color: '#001675',
+        color: '#151515',
         secondaryColor: '#0080ff',
-        strokeWidth: 1
+        strokeWidth: 1,
+        frameColor: '#D5D5D5',
+        frameBorderColor: '#B4B4B4',
+        frameBorderRadius: 12
       }}
     >
       <div className='form-field'>

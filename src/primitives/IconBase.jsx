@@ -4,7 +4,20 @@ import { IconContext } from './IconProvider'
 import useFinalValue from '../hooks/useFinalValue'
 
 const IconBase = forwardRef(
-  ({ design, size, color, secondaryColor, strokeWidth, renderPath }, ref) => {
+  (
+    {
+      design,
+      size,
+      color,
+      secondaryColor,
+      strokeWidth,
+      renderPath,
+      frameColor,
+      frameBorderColor,
+      frameBorderRadius
+    },
+    ref
+  ) => {
     const context = useContext(IconContext)
 
     const {
@@ -12,7 +25,10 @@ const IconBase = forwardRef(
       size: contextSize,
       color: contextColor,
       secondaryColor: contextSecondaryColor,
-      strokeWidth: contextStrokeWidth
+      strokeWidth: contextStrokeWidth,
+      frameColor: contextFrameColor,
+      frameBorderColor: contextFrameBorderColor,
+      frameBorderRadius: contextFrameBorderRadius
     } = context
 
     design = useFinalValue(design, contextDesign, 'outline')
@@ -23,6 +39,17 @@ const IconBase = forwardRef(
       secondaryColor,
       contextSecondaryColor,
       '#A6A6A6'
+    )
+    frameColor = useFinalValue(frameColor, contextFrameColor, null)
+    frameBorderColor = useFinalValue(
+      frameBorderColor,
+      contextFrameBorderColor,
+      null
+    )
+    frameBorderRadius = useFinalValue(
+      frameBorderRadius,
+      contextFrameBorderRadius,
+      0
     )
 
     return (
@@ -38,24 +65,19 @@ const IconBase = forwardRef(
         strokeLinecap='round' // butt | round | square
         strokeLinejoin='round' // arcs | bevel |miter | miter-clip | round
       >
-        <rect
-          fill='none'
-          stroke='none'
-          strokeWidth='1'
-          width='23'
-          height='23'
-          rx='1'
-          x='.5'
-          y='.5'
-        />
-        <circle
-          cx='12'
-          cy='12'
-          r='11.5'
-          fill='none'
-          stroke='none'
-          strokeWidth={1}
-        />
+        {(frameColor || frameBorderColor) && (
+          <rect
+            fill={frameColor}
+            stroke={(frameBorderColor && frameBorderColor) || 'none'}
+            strokeWidth='1'
+            width='23'
+            height='23'
+            rx={frameBorderRadius}
+            x='.5'
+            y='.5'
+          />
+        )}
+
         {renderPath[design] ? renderPath[design](color, secondaryColor) : null}
       </svg>
     )
