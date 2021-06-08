@@ -92,4 +92,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 ## License
 
-MIT © [svgbook](https://github.com/svgbook)
+MIT © [svgbook](https://github.com/svgbook), [svgbook](https://svgbook.com)
