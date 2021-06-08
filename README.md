@@ -12,7 +12,7 @@ A perfectly multi style and multi design icons library made for designers, devel
 ## Install
 
 ```bash
-yarn add phosphor-react
+yarn add svgbook-icons
 ```
 
 or
