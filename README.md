@@ -62,7 +62,33 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
+### Context
+You can also use React Context to make applying a default style to all icons. Create an IconContext.Provider at the main parent react component of the app (or anywhere above the icons in the tree) and pass in a configuration object with props to be applied by default to all icons like this:
 
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import { Icons, IconProvider } from "svgbook-icons";
+
+const App = () => {
+  return (
+    <IconProvider
+      value={{
+        design: "outline"
+        color: "0080ff",
+        size: 32,
+      }}
+    >
+      <div>
+        <Icons.ArrowUp />
+      </div>
+    </IconProvider>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+```
 
 ## License
 
