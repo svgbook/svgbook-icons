@@ -1,29 +1,68 @@
-# svgbook-icons
-
-> Made with create-react-library
-
 [![NPM](https://img.shields.io/npm/v/svgbook-icons.svg)](https://www.npmjs.com/package/svgbook-icons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+# SVGBook Icons
+
+SVGBook is an open source library with hundred of thousands SVG Icons. And absolutely 100% free premium icons, no email sign-up, no newsletters. You can browse the full suite of icons at [svgbook.com](https://cvpaper.com).
+
+Include popular icons in your React projects easily with [svgbook-icons](https://www.npmjs.com/package/svgbook-icons), which utilizes ES6 imports that allows you to include only the icons that your project is using.
+
+# How To Use
+A perfectly multi style and multi design icons library made for designers, developers, and pretty much everyone.
+
 ## Install
+
+```bash
+yarn add phosphor-react
+```
+
+or
 
 ```bash
 npm install --save svgbook-icons
 ```
 
 ## Usage
+Import the icons you need into your React project and declare them in your render method:
 
 ```jsx
-import React, { Component } from 'react'
+import React from "react";
+import ReactDOM from "react-dom";
+import { ArrowUp, Download, Copy } from "svgbook-icons";
 
-import MyComponent from 'svgbook-icons'
-import 'svgbook-icons/dist/index.css'
+const App = () => {
+  return (
+    <div>
+      <Horse />
+      <ArrowUp design="outline" color="#0080ff" size="32" />
+    </div>
+  );
+};
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+ReactDOM.render(<App />, document.getElementById("root"));
+
 ```
+### Props
+Default values for the most common props are given below:
+
+Prop | Description | Default
+---- | ----------- | -------
+`color` | Set the icon color | `currentColor`
+`size` | Set the width and height of the svg icon | `24`
+`strokeWidth` | Set the stroke width of the icon | `2`
+`style` | Add [inline styles](https://facebook.github.io/react/tips/inline-styles.html) to the element | `{}`
+
+You can also import the whole icon library like this:
+
+```jsx
+import * as Icon from 'svgbook-icons';
+
+const MyComponent = () => {
+  return <Icon.ArrowUp />
+};
+
+export default MyComponent;
+```
+
 
 ## License
 
