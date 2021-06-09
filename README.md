@@ -90,6 +90,8 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 ```
 
+## Auther 
+Asim Rajput [@asim_pro](https://twitter.com/asim_pro), Shahzab Asif [@MeShahzab](https://twitter.com/MeShahzab), Saad Amir [@saadaamir_](https://twitter.com/saadaamir_)
 ## License
 
 MIT © [svgbook](https://github.com/svgbook)
