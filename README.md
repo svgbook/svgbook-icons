@@ -2,12 +2,12 @@
 
 # SVGBook Icons
 
-SVGBook is an open source library with hundred of thousands SVG Icons. And absolutely 100% free premium icons, no email sign-up, no newsletters. You can browse the full suite of icons at [svgbook.com](https://cvpaper.com).
+SVGBook is an open source library with hundred of thousands SVG Icons. And absolutely free premium icons, no sign-up required. You can browse the full sets of icons at [svgbook.com](https://svgbook.com).
 
-Include popular icons in your React projects easily with [svgbook-icons](https://www.npmjs.com/package/svgbook-icons), which utilizes ES6 imports that allows you to include only the icons that your project is using.
+Include popular icons in your React projects easily with [svgbook-icons](https://svgbook.com), which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 # How To Use
-A perfectly multi style and multi design icons library made for designers, developers, and pretty much everyone.
+A perfect multi style and multi design icons library made for designers & developers.
 
 ## Install
 
