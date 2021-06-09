@@ -41,7 +41,9 @@ const App = () => {
         size: 200,
         color: '#151515',
         secondaryColor: '#0080ff',
-        strokeWidth: 1
+        strokeWidth: 1,
+        frameBorderColor: '#0080ff',
+        frameBorderRadius: '12'
       }}
     >
       <div className='form-field'>

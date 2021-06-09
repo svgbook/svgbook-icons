@@ -67,7 +67,7 @@ const IconBase = forwardRef(
       >
         {(frameColor || frameBorderColor) && (
           <rect
-            fill={frameColor}
+            fill={(frameColor && frameColor) || 'none'}
             stroke={(frameBorderColor && frameBorderColor) || 'none'}
             strokeWidth='1'
             width='23'
