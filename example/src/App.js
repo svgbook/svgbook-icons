@@ -9,23 +9,21 @@ const availableDesigns = ['outline', 'fill', 'duotone', 'color']
 const IconGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin: 50px auto;
+  margin: 0.5rem;
 `
 const IconItem = styled.div`
   background-color: #fff;
   border-radius: 10px;
-  width: 175px;
+  min-width: 175px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  margin: 0.5rem;
   > svg {
-    width: 50%;
+    width: 40%;
     height: auto;
   }
   > span {
@@ -41,9 +39,9 @@ const App = () => {
         size: 200,
         color: '#151515',
         secondaryColor: '#0080ff',
-        strokeWidth: 1,
-        frameBorderColor: '#0080ff',
-        frameBorderRadius: '12'
+        strokeWidth: 1
+        // frameBorderColor: '#0080ff',
+        // frameBorderRadius: '1'
       }}
     >
       <div className='form-field'>
