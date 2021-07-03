@@ -39,7 +39,7 @@ renderPath['duotone'] = (color) => (
 renderPath['color'] = (color, secondaryColor) => (
   <Fragment>
     <path
-      fillOpacity={secondaryColor}
+      fill={secondaryColor}
       d='M16.67,9.33v7.34A1.34,1.34,0,0,1,15.33,18H8.67a1.34,1.34,0,0,1-1.34-1.33V7.33A1.34,1.34,0,0,1,8.67,6h4.66V8.67a.66.66,0,0,0,.67.66Z'
     />
     <path fill='none' d='M10.67,12H10v3.33h.67' />
