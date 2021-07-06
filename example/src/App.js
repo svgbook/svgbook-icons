@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Icons as AllIcons, IconProvider } from 'svgbook-icons'
+
+import * as AllIcons from 'svgbook-icons'
+import { IconProvider } from 'svgbook-icons'
 
 const result = Object.keys(AllIcons).reverse()
 

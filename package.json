@@ -1,6 +1,6 @@
 {
   "name": "svgbook-icons",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Svgbook react icons",
   "author": "svgbook",
   "keywords": [
@@ -16,6 +16,7 @@
   "license": "MIT",
   "repository": "svgbook/svgbook-icons",
   "main": "dist/index.js",
+  "sideEffects": false,
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
