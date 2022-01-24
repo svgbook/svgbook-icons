@@ -91,7 +91,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Author 
-Asim Rajput ([@asim_pro](https://twitter.com/asim_pro)), Shahzab Asif ([@MeShahzab](https://twitter.com/MeShahzab)), Saad Amir ([@saadaamir_](https://twitter.com/saadaamir_))
+Asim Rajput ([@asim_pro](https://twitter.com/asim_pro)), Shahzab Asif ([@MeShahzab](https://twitter.com/MeShahzab)), Saad Amir ([@itxMeSaadi](https://twitter.com/itxMeSaadi))
 ## License
 
 MIT © [svgbook](https://github.com/svgbook)
